@@ -68,7 +68,7 @@ class GradCAM:
       self.gradients = list()
       self.resnet34.zero_grad()
       #2. forward pass
-      out = self.resnet34(torch_img)
+      out = self.resnet34(input_img)
       #3. Obtain desired output node
       out = out.squeeze()
       out_sort, out_perm = out.sort()
